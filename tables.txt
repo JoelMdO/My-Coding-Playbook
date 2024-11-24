@@ -1,0 +1,23 @@
+.open "C:/Users/joelm/Documents/RCVA/rcva/assets/data/data.db"
+
+CREATE TABLE Section (
+ SectionID INTEGER PRIMARY KEY AUTOINCREMENT,
+ SectionName TEXT NOT NULL
+);
+
+CREATE TABLE Data (
+    DataID INTEGER PRIMARY KEY AUTOINCREMENT,			
+    SectionID TEXT NOT NULL,    
+    Subject TEXT NOT NULL,
+    Code TEXT NOT NULL,
+    Description TEXT,
+   );
+
+Sections:
+'Flutter',
+                  'React',
+                  'NodeJS',
+                  'Websites',
+                  'General'
+
+https://stackoverflow.com/questions/60170406/is-there-a-solution-to-work-with-sqlite-on-flutter-desktop-for-windows
