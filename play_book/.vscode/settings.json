@@ -1,9 +1,0 @@
-{
-    "git.ignoreLimitWarning": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit"
-    },
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "java.compile.nullAnalysis.mode": "automatic",
-    "cmake.sourceDirectory": "C:/Users/joelm/Documents/Bafik/Projects/PlayBook/play_book/windows"
-}
