@@ -5,15 +5,15 @@ import 'package:playbook/utils/screen_size.dart';
 import 'package:playbook/widgets/buttons/dynamic_buttons/dynamic_buttons.dart';
 import 'package:provider/provider.dart';
 
-class TextEditDialog extends StatefulWidget {
+class TextFieldDialog extends StatefulWidget {
   final String subject;
-  const TextEditDialog({super.key, required this.subject});
+  const TextFieldDialog({super.key, required this.subject});
 
   @override
-  State<TextEditDialog> createState() => _TextEditDialogState();
+  State<TextFieldDialog> createState() => _TextFieldDialogState();
 }
 
-class _TextEditDialogState extends State<TextEditDialog> {
+class _TextFieldDialogState extends State<TextFieldDialog> {
   /// Controllers for each one of the dialog boxes (Code and Descritption):
   /// set up here to avoid rebuilt and lost of information as well as separate
   /// as needed to avoid information missplaced.
@@ -154,7 +154,9 @@ class _TextEditDialogState extends State<TextEditDialog> {
               top: 5,
               right: 45,
               child: DynamicActionButton(
-                  type: isEdit ? 'CheckEditing' : 'Edit', subType: section)),
+                type: isEdit ? 'Check' : 'Edit',
+                subType: section,
+              )),
         ]);
   }
 

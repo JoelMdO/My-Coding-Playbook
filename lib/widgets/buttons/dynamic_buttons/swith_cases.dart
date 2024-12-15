@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:playbook/src/provider/provider.dart';
-import 'package:playbook/widgets/buttons/dynamic_buttons/services/save_in_database.dart';
-import 'package:playbook/widgets/buttons/dynamic_buttons/services/update_database.dart';
+import 'package:playbook/widgets/buttons/dynamic_buttons/save_in_database.dart';
+import 'package:playbook/widgets/buttons/dynamic_buttons/update_database.dart';
 import 'package:provider/provider.dart';
 
 void copyToClipboard(String text, BuildContext context) {
@@ -34,10 +34,12 @@ void swithCases(String type, BuildContext context, bool isCopy, dropdownKey,
       break;
     case 'Edit':
       Provider.of<DataBaseProvider>(context, listen: false)
-          .setEditing(subType, true);
+          .selectFieldToBeEdited(subType, true);
       Provider.of<DataBaseProvider>(context, listen: false).textField(true);
       Provider.of<DataBaseProvider>(context, listen: false)
-          .isTheButtonEditingClicked(true);
+          .isSaveButtonDisabled(true);
+      // Provider.of<DataBaseProvider>(context, listen: false)
+      //     .isTheButtonEditingClicked(true);
       break;
     case 'Save':
       saveInDatabase(context);
@@ -56,11 +58,13 @@ void swithCases(String type, BuildContext context, bool isCopy, dropdownKey,
       Provider.of<DataBaseProvider>(context, listen: false).textField(false);
       Provider.of<DataBaseProvider>(context, listen: false).dataToBeSearch("");
       Navigator.pop(context, true);
-    case 'Editing':
+    case 'Check':
       Provider.of<DataBaseProvider>(context, listen: false)
-          .setEditing(subType, false);
+          .selectFieldToBeEdited(subType, false);
       Provider.of<DataBaseProvider>(context, listen: false)
-          .isButtonDisabled(false);
+          .isSaveButtonDisabled(false);
+      // Provider.of<DataBaseProvider>(context, listen: false)
+      //     .isTheButtonEditingClicked(false);
       break;
   }
 }

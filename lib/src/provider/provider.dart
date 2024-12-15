@@ -14,10 +14,11 @@ class DataBaseProvider with ChangeNotifier {
   String _dataToSearch = '';
   String _changedCode = '';
   String _changedDescription = '';
-  bool _buttonIsDisabled = false;
+  bool _isSaveButtonIsDisabled = true;
   bool _dropDownToClear = false;
   bool _isTextFieldChanged = false;
-  bool _isEditing = false;
+  final bool _isEditButtonClicked = false;
+  // final bool _isButtonCheckClicked = false;
   final Map<String, TextEditingController> textControllers = {
     'Subject': TextEditingController(),
     'Code': TextEditingController(),
@@ -33,9 +34,11 @@ class DataBaseProvider with ChangeNotifier {
   get dataToSearch => _dataToSearch;
   get changedCode => _changedCode;
   get changedDescription => _changedDescription;
-  get buttonIsDisabled => _buttonIsDisabled;
+  // get buttonIsDisabled => _buttonIsDisabled;
   get isTextFieldChanged => _isTextFieldChanged;
-  get isEditing => _isEditing;
+  get isEditButtonClicked => _isEditButtonClicked;
+  // get isButtonCheckClicked => _isButtonCheckClicked;
+  get isSaveButtonIsDisabled => _isSaveButtonIsDisabled;
   DataSection get data => _data;
   bool get dropDownToClear => _dropDownToClear;
 
@@ -69,7 +72,7 @@ class DataBaseProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void setEditing(String newSection, bool newIsActive) {
+  void selectFieldToBeEdited(String newSection, bool newIsActive) {
     _data = DataSection(section: newSection, isActive: newIsActive);
     notifyListeners();
   }
@@ -84,8 +87,8 @@ class DataBaseProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void isButtonDisabled(bool buttonIsDisabled) {
-    _buttonIsDisabled = buttonIsDisabled;
+  void isSaveButtonDisabled(bool isSaveButtonIsDisabled) {
+    _isSaveButtonIsDisabled = isSaveButtonIsDisabled;
     notifyListeners();
   }
 
@@ -94,10 +97,16 @@ class DataBaseProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void isTheButtonEditingClicked(bool isEditing) {
-    _isEditing = isEditing;
-    notifyListeners();
-  }
+  // void isTheButtonCheckClicked(bool isCheck) {
+  //   _isButtonCheckClicked = isCheck;
+  //   notifyListeners();
+  // }
+
+  // void isTheButtonEditingClicked(isEditButtonClicked) {
+  //   print('thebuttonis clicked');
+  //   _isEditButtonClicked = isEditButtonClicked;
+  //   notifyListeners();
+  // }
 
   void clearAll() {
     _section = '';
@@ -107,7 +116,6 @@ class DataBaseProvider with ChangeNotifier {
     _dataToSearch = '';
     _changedCode = '';
     _changedDescription = '';
-    _buttonIsDisabled = false;
     notifyListeners();
   }
 

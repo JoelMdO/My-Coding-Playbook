@@ -3,7 +3,7 @@ import 'package:playbook/src/models/database_helper.dart';
 import 'package:playbook/src/models/model.dart';
 import 'package:playbook/src/provider/provider.dart';
 import 'package:playbook/utils/colors.dart';
-import 'package:playbook/widgets/dialog/text_edit_dialog.dart/text_edit_dialog.dart';
+import 'package:playbook/widgets/dialog/textField_dialog.dart';
 // import 'package:playbook/widgets/list_view/update_providers.dart';
 import 'package:provider/provider.dart';
 
@@ -112,7 +112,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                                           showDialog(
                                               context: context,
                                               builder: ((context) =>
-                                                  TextEditDialog(
+                                                  TextFieldDialog(
                                                     subject: data.subject!,
                                                   )));
                                         },
@@ -134,7 +134,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                                           showDialog(
                                               context: context,
                                               builder: ((context) =>
-                                                  TextEditDialog(
+                                                  TextFieldDialog(
                                                     subject: data.subject!,
                                                   )));
                                         },
@@ -156,7 +156,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                                           showDialog(
                                               context: context,
                                               builder: ((context) =>
-                                                  TextEditDialog(
+                                                  TextFieldDialog(
                                                     subject: data.subject!,
                                                   )));
                                         },
@@ -221,7 +221,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
               //                             data.code, data.description);
               //                         showDialog(
               //                             context: context,
-              //                             builder: ((context) => TextEditDialog(
+              //                             builder: ((context) => TextFieldDialog(
               //                                   subject: data.subject!,
               //                                 )));
               //                       },
@@ -238,7 +238,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
               //                             showDialog(
               //                                 context: context,
               //                                 builder: ((context) =>
-              //                                     TextEditDialog(
+              //                                     TextFieldDialog(
               //                                       subject: data.subject!,
               //                                     )));
               //                           },
@@ -255,7 +255,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
               //                             showDialog(
               //                                 context: context,
               //                                 builder: ((context) =>
-              //                                     TextEditDialog(
+              //                                     TextFieldDialog(
               //                                       subject: data.subject!,
               //                                     )));
               //                           },
