@@ -23,17 +23,6 @@ class DynamicActionButton extends StatefulWidget {
 }
 
 class _DynamicActionButtonState extends State<DynamicActionButton> {
-  //
-  /// 4 types of buttons are created: Copy, Edit, Editing and Save
-  // bool isTheCopyButton = false,
-  //     // isTheEditButton = false,
-  //     isTheSaveAfterEditingButton = false,
-  //     isTheSaveButton = false;
-  // isTheCheckButton = false,
-  // isbuttonDisabled = false,
-  // isbuttonEditClicked = false,
-  // isbuttonCheckClicked = false;
-
   @override
   Widget build(BuildContext context) {
     return Consumer<DataBaseProvider>(builder: (context, provider, child) {
@@ -44,27 +33,6 @@ class _DynamicActionButtonState extends State<DynamicActionButton> {
           widget.type == 'Save_After_Editing';
       final bool isTheCopyButton = widget.type == 'Copy';
       final bool isEdit = widget.type == 'Edit' && widget.type != 'Check';
-      // if (widget.type == 'Edit') provider.isTheButtonEditingClicked(true);
-      // switch (widget.type) {
-      //   case 'Copy':
-      //     isTheCopyButton = true;
-      //     break;
-      //   // case 'Edit':
-      //   //   isTheEditButton = true;
-      //   //   break;
-      //   case 'Save_After_Editing':
-      //     isTheSaveAfterEditingButton = true;
-      //     // isbuttonDisabled = true;
-      //     isTheSaveButton = true;
-      //     break;
-      //   case 'Save':
-      //     isTheSaveButton = true;
-      //     // isbuttonDisabled = true;
-      //     break;
-      // case 'Check':
-      //   isTheEditButton = false;
-      //   break;
-      //}
 
       return isTheSaveButton
           ? ElevatedButton(
@@ -93,7 +61,6 @@ class _DynamicActionButtonState extends State<DynamicActionButton> {
                       : Icon(Icons.check_outlined),
               color: amberColor,
               onPressed: () {
-                // isEdit != isEdit;
                 swithCases(widget.type, context, false, widget.dropdownKey,
                     widget.text, widget.subType);
               },

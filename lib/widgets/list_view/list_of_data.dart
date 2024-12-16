@@ -4,7 +4,6 @@ import 'package:playbook/src/models/model.dart';
 import 'package:playbook/src/provider/provider.dart';
 import 'package:playbook/utils/colors.dart';
 import 'package:playbook/widgets/dialog/textField_dialog.dart';
-// import 'package:playbook/widgets/list_view/update_providers.dart';
 import 'package:provider/provider.dart';
 
 class ListOfDataRetrievedFromDB extends StatefulWidget {
@@ -173,98 +172,6 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                   ),
                 ),
               );
-              // return Expanded(
-              //     child: DataTable(
-              //         sortColumnIndex: 1,
-              //         border: TableBorder.all(
-              //           color: greenColor,
-              //         ),
-              //         dataRowColor: WidgetStateProperty.resolveWith<Color?>(
-              //           (Set<WidgetState> states) {
-              //             return amberColor;
-              //           },
-              //         ),
-              //         columns: const [
-              //           DataColumn(
-              //             label: Text(
-              //               'Subject',
-              //               style: TextStyle(
-              //                 fontSize: 12,
-              //                 fontWeight: FontWeight.bold,
-              //               ),
-              //             ),
-              //           ),
-              //           DataColumn(
-              //             label: Text(
-              //               'Code',
-              //               style: TextStyle(
-              //                 fontSize: 12,
-              //                 fontWeight: FontWeight.bold,
-              //               ),
-              //             ),
-              //           ),
-              //           DataColumn(
-              //             label: Text(
-              //               'Description',
-              //               style: TextStyle(
-              //                 fontSize: 12,
-              //                 fontWeight: FontWeight.bold,
-              //               ),
-              //             ),
-              //           ),
-              //         ],
-              //         rows: dataList
-              //             .map((data) => DataRow(cells: [
-              //                   DataCell(GestureDetector(
-              //                       onTap: () {
-              //                         updateProviders(context, data.subject,
-              //                             data.code, data.description);
-              //                         showDialog(
-              //                             context: context,
-              //                             builder: ((context) => TextFieldDialog(
-              //                                   subject: data.subject!,
-              //                                 )));
-              //                       },
-              //                       child: Text(data.subject!,
-              //                           style: const TextStyle(
-              //                             fontSize: 10,
-              //                           )))),
-              //                   DataCell(SingleChildScrollView(
-              //                       scrollDirection: Axis.vertical,
-              //                       child: GestureDetector(
-              //                           onTap: () {
-              //                             updateProviders(context, data.subject,
-              //                                 data.code, data.description);
-              //                             showDialog(
-              //                                 context: context,
-              //                                 builder: ((context) =>
-              //                                     TextFieldDialog(
-              //                                       subject: data.subject!,
-              //                                     )));
-              //                           },
-              //                           child: Text(data.code!,
-              //                               style: const TextStyle(
-              //                                 fontSize: 10,
-              //                               ))))),
-              //                   DataCell(SingleChildScrollView(
-              //                       scrollDirection: Axis.vertical,
-              //                       child: GestureDetector(
-              //                           onTap: () {
-              //                             updateProviders(context, data.subject,
-              //                                 data.code, data.description);
-              //                             showDialog(
-              //                                 context: context,
-              //                                 builder: ((context) =>
-              //                                     TextFieldDialog(
-              //                                       subject: data.subject!,
-              //                                     )));
-              //                           },
-              //                           child: Text(data.description!,
-              //                               style: const TextStyle(
-              //                                 fontSize: 10,
-              //                               ))))),
-              //                 ]))
-              //             .toList()));
             } else {
               return const Center(
                   child: Text(

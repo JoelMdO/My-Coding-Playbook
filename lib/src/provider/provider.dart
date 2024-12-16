@@ -18,7 +18,6 @@ class DataBaseProvider with ChangeNotifier {
   bool _dropDownToClear = false;
   bool _isTextFieldChanged = false;
   final bool _isEditButtonClicked = false;
-  // final bool _isButtonCheckClicked = false;
   final Map<String, TextEditingController> textControllers = {
     'Subject': TextEditingController(),
     'Code': TextEditingController(),
@@ -34,10 +33,8 @@ class DataBaseProvider with ChangeNotifier {
   get dataToSearch => _dataToSearch;
   get changedCode => _changedCode;
   get changedDescription => _changedDescription;
-  // get buttonIsDisabled => _buttonIsDisabled;
   get isTextFieldChanged => _isTextFieldChanged;
   get isEditButtonClicked => _isEditButtonClicked;
-  // get isButtonCheckClicked => _isButtonCheckClicked;
   get isSaveButtonIsDisabled => _isSaveButtonIsDisabled;
   DataSection get data => _data;
   bool get dropDownToClear => _dropDownToClear;
@@ -96,17 +93,6 @@ class DataBaseProvider with ChangeNotifier {
     _isTextFieldChanged = isTextFieldChanged;
     notifyListeners();
   }
-
-  // void isTheButtonCheckClicked(bool isCheck) {
-  //   _isButtonCheckClicked = isCheck;
-  //   notifyListeners();
-  // }
-
-  // void isTheButtonEditingClicked(isEditButtonClicked) {
-  //   print('thebuttonis clicked');
-  //   _isEditButtonClicked = isEditButtonClicked;
-  //   notifyListeners();
-  // }
 
   void clearAll() {
     _section = '';

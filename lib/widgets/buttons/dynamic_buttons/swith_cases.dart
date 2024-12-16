@@ -38,8 +38,6 @@ void swithCases(String type, BuildContext context, bool isCopy, dropdownKey,
       Provider.of<DataBaseProvider>(context, listen: false).textField(true);
       Provider.of<DataBaseProvider>(context, listen: false)
           .isSaveButtonDisabled(true);
-      // Provider.of<DataBaseProvider>(context, listen: false)
-      //     .isTheButtonEditingClicked(true);
       break;
     case 'Save':
       saveInDatabase(context);
@@ -63,8 +61,6 @@ void swithCases(String type, BuildContext context, bool isCopy, dropdownKey,
           .selectFieldToBeEdited(subType, false);
       Provider.of<DataBaseProvider>(context, listen: false)
           .isSaveButtonDisabled(false);
-      // Provider.of<DataBaseProvider>(context, listen: false)
-      //     .isTheButtonEditingClicked(false);
       break;
   }
 }
