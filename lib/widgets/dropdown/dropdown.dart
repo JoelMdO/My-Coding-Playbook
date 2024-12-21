@@ -57,8 +57,8 @@ class DropdownSectionState extends State<DropdownSection> {
     }).toList();
 //
     return DropdownButton2<String>(
-      key: Key('dropDownValue'),
-      hint: Text(
+      key: const Key('dropDownValue'),
+      hint: const Text(
         'Section',
         overflow: TextOverflow.ellipsis,
       ).dropDownTextStyle(),

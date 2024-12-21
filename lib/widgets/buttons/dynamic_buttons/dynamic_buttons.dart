@@ -27,8 +27,9 @@ class _DynamicActionButtonState extends State<DynamicActionButton> {
   Widget build(BuildContext context) {
     return Consumer<DataBaseProvider>(builder: (context, provider, child) {
       // Determine button properties based on the provider and widget type
-      final bool isTheSaveButton =
-          widget.type == 'Save' || widget.type == 'Save_After_Editing';
+      final bool isTheSaveButton = widget.type == 'Save' ||
+          widget.type == 'Save_After_Editing' ||
+          widget.type == 'Clear';
       final bool isTheSaveAfterEditingButton =
           widget.type == 'Save_After_Editing';
       final bool isTheCopyButton = widget.type == 'Copy';
@@ -50,15 +51,15 @@ class _DynamicActionButtonState extends State<DynamicActionButton> {
                   elevation: 5.0),
               child: Text(
                 isTheSaveAfterEditingButton ? 'Save' : widget.type,
-                style:
-                    TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
+                style: const TextStyle(
+                    fontWeight: FontWeight.w500, color: Colors.white),
               ))
           : IconButton(
               icon: isTheCopyButton
-                  ? Icon(Icons.copy)
+                  ? const Icon(Icons.copy)
                   : isEdit
-                      ? Icon(Icons.edit)
-                      : Icon(Icons.check_outlined),
+                      ? const Icon(Icons.edit)
+                      : const Icon(Icons.check_outlined),
               color: amberColor,
               onPressed: () {
                 swithCases(widget.type, context, false, widget.dropdownKey,

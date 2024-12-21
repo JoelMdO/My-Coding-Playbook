@@ -45,7 +45,7 @@ class _DataInsertFieldState extends State<DataInsertField> {
                 controller: controllerProvider.textControllers[widget.type],
                 decoration: InputDecoration(
                     labelText: 'Type ${widget.type} here',
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                         color: blueShadowColor,
                         fontSize: 14,
                         fontWeight: FontWeight.bold),

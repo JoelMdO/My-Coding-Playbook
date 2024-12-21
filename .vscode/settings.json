@@ -4,4 +4,10 @@
             "source.fixAll": "explicit"
     },
     "editor.formatOnSave": true,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        }
+    }
 }

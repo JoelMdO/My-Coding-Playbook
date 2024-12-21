@@ -3,7 +3,7 @@ import 'package:playbook/src/models/database_helper.dart';
 import 'package:playbook/src/models/model.dart';
 import 'package:playbook/src/provider/provider.dart';
 import 'package:playbook/utils/colors.dart';
-import 'package:playbook/widgets/dialog/textField_dialog.dart';
+import 'package:playbook/widgets/dialog/textfield_dialog.dart';
 import 'package:provider/provider.dart';
 
 class ListOfDataRetrievedFromDB extends StatefulWidget {
@@ -69,10 +69,10 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                               decoration: BoxDecoration(
                                 color: amberColor,
                               ),
-                              children: [
+                              children: const [
                                 TableCell(
                                     child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                        padding: EdgeInsets.all(8.0),
                                         child: Text(
                                           'Subject',
                                           textAlign: TextAlign.center,
@@ -83,7 +83,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                                         ))),
                                 TableCell(
                                     child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                        padding: EdgeInsets.all(8.0),
                                         child: Text(
                                           'Code',
                                           textAlign: TextAlign.center,
@@ -94,7 +94,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                                         ))),
                                 TableCell(
                                     child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                        padding: EdgeInsets.all(8.0),
                                         child: Text('Description',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
@@ -120,7 +120,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                                             child: Text(
                                               textAlign: TextAlign.center,
                                               data.subject!,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -142,7 +142,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                                             child: Text(
                                               textAlign: TextAlign.center,
                                               data.code!,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -163,7 +163,7 @@ class _ListOfDataRetrievedFromDBState extends State<ListOfDataRetrievedFromDB> {
                                             padding: const EdgeInsets.all(2.0),
                                             child: Text(data.description!,
                                                 textAlign: TextAlign.center,
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                   fontSize: 12,
                                                   fontWeight: FontWeight.bold,
                                                 )))))

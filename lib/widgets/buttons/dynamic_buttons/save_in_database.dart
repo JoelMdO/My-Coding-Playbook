@@ -35,7 +35,7 @@ void saveInDatabase(BuildContext context) async {
   // Ensure the widget is still mounted before showing SnackBar
   messenger // access ScaffoldMessenger
       .showSnackBar(SnackBar(
-          duration: Duration(seconds: 3),
+          duration: const Duration(seconds: 3),
           backgroundColor: greenColor,
           content: Text(responseText)));
 

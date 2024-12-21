@@ -71,7 +71,7 @@ class _ReadState extends State<Read> {
                             .dataToBeSearch(controller);
                       },
                     ),
-                    DropdownSection(page: 'read'),
+                    const DropdownSection(page: 'read'),
                   ]),
               SizedBox(
                 width: myScreenSize.screenWidth * 0.9,
@@ -84,7 +84,7 @@ class _ReadState extends State<Read> {
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 20),
                         ))
-                    : FittedBox(
+                    : const FittedBox(
                         fit: BoxFit.scaleDown,
                         child: ListOfDataRetrievedFromDB()),
               ),
@@ -95,8 +95,8 @@ class _ReadState extends State<Read> {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          HomePageInitButton(type: 'Go to Insert Page'),
-                          Padding(padding: const EdgeInsets.only(bottom: 5)),
+                          const HomePageInitButton(type: 'Go to Insert Page'),
+                          const Padding(padding: EdgeInsets.only(bottom: 5)),
                           Image.asset('assets/bafik.png'),
                         ]),
                   ))

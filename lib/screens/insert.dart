@@ -72,38 +72,38 @@ class _InsertDataState extends State<InsertData> {
                               child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
-                                    SizedBox(height: 50),
+                                    const SizedBox(height: 50),
                                     SizedBox(
                                       width: 500,
                                       child: Row(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.center,
                                         children: [
-                                          Text(
+                                          const Text(
                                             'Select:',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold),
                                           ),
-                                          SizedBox(width: 50),
+                                          const SizedBox(width: 50),
                                           DropdownSection(
                                               key: dropdownKey, page: 'insert'),
                                         ],
                                         // )
                                       ),
                                     ),
-                                    SizedBox(height: 20),
-                                    DataInsertField(
+                                    const SizedBox(height: 20),
+                                    const DataInsertField(
                                       type: 'Subject',
                                     ),
-                                    SizedBox(height: 20),
-                                    DataInsertField(
+                                    const SizedBox(height: 20),
+                                    const DataInsertField(
                                       type: 'Code',
                                     ),
-                                    SizedBox(height: 20),
-                                    DataInsertField(
+                                    const SizedBox(height: 20),
+                                    const DataInsertField(
                                       type: 'Description',
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 20,
                                     ),
                                     SizedBox(
@@ -116,10 +116,11 @@ class _InsertDataState extends State<InsertData> {
                                               type: 'Save',
                                               dropdownKey: dropdownKey,
                                             ),
-                                            DynamicActionButton(
+                                            const DynamicActionButton(
                                               type: 'Clear',
                                             ),
-                                            HomePageInitButton(type: 'Read')
+                                            const HomePageInitButton(
+                                                type: 'Read')
                                           ],
                                         )),
                                   ]))),

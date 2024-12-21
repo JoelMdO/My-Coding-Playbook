@@ -5,8 +5,12 @@ import 'package:provider/provider.dart';
 void updateProvidersonTextField(
     BuildContext context, String section, String value) {
   Provider.of<DataBaseProvider>(context, listen: false).textField(true);
+  Provider.of<DataBaseProvider>(context, listen: false)
+      .isSaveButtonDisabled(false);
   if (value.isEmpty || value == '') {
     Provider.of<DataBaseProvider>(context, listen: false).textField(false);
+    Provider.of<DataBaseProvider>(context, listen: false)
+        .isSaveButtonDisabled(true);
   }
   if (section == 'Subject') {
     Provider.of<DataBaseProvider>(context, listen: false).insertSubject(value);

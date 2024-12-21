@@ -37,18 +37,18 @@ class _TextFieldDialogState extends State<TextFieldDialog> {
     bool isActive = context.watch<DataBaseProvider>().data.isActive;
 
     return AlertDialog(
-      key: Key('AlertDialog TextEditing'),
+      key: const Key('AlertDialog TextEditing'),
       insetPadding: const EdgeInsets.symmetric(horizontal: 150, vertical: 50),
       titlePadding: const EdgeInsets.only(top: 30, left: 25, right: 10),
       title: title(myScreenSize.screenWidth, myScreenSize.screenHeight,
           widget.subject, context),
       content: content(myScreenSize.screenWidth, myScreenSize.screenHeight,
           context, section, isActive, codeController, descriptionController),
-      actions: <Widget>[
-        const DynamicActionButton(
+      actions: const <Widget>[
+        DynamicActionButton(
           type: 'Save_After_Editing',
         ),
-        const CloseButton(),
+        CloseButton(),
       ],
     );
   }
@@ -68,7 +68,7 @@ class _TextFieldDialogState extends State<TextFieldDialog> {
       width: screenWidth * 0.9,
       height: screenHeight * 0.10,
       child: Padding(
-        padding: EdgeInsets.only(left: 20, top: 10),
+        padding: const EdgeInsets.only(left: 20, top: 10),
         child: Text('$title',
             style: const TextStyle(
                 fontWeight: FontWeight.bold, color: blackColor)),
@@ -90,7 +90,7 @@ class _TextFieldDialogState extends State<TextFieldDialog> {
         child: Column(children: [
           contentSection(screenWidth, screenHeight, isEditCode, context,
               codeController, "Code"),
-          Padding(padding: EdgeInsets.only(top: 10)),
+          const Padding(padding: EdgeInsets.only(top: 10)),
           contentSection(screenWidth, screenHeight, isEditDescription, context,
               descriptionController, "Description"),
         ]));

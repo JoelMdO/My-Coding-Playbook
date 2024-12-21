@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              Positioned(
+              const Positioned(
                 bottom: 30,
                 right: 15,
                 child: ExitButton(),
