@@ -52,7 +52,7 @@ class _InsertDataState extends State<InsertData> {
                     'Playbook',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Image.asset('assets/bafik.png', width: 100, height: 100),
+                  Image.asset('assets/byJoel.png', width: 100, height: 100),
                   const ExitButton(),
                 ],
               ),
@@ -127,7 +127,7 @@ class _InsertDataState extends State<InsertData> {
                       Positioned(
                           bottom: 10,
                           right: 10,
-                          child: Image.asset('assets/bafik.png')),
+                          child: Image.asset('assets/byJoel.png')),
                     ])),
           ),
         )));

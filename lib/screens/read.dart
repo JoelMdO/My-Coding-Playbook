@@ -43,7 +43,7 @@ class _ReadState extends State<Read> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               const Text('Playbook'),
-              Image.asset('assets/bafik.png', width: 80, height: 80),
+              Image.asset('assets/byJoel.png', width: 80, height: 80),
               const ExitButton(),
             ],
           ),
@@ -94,10 +94,11 @@ class _ReadState extends State<Read> {
                     alignment: Alignment.bottomRight,
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
+                        spacing: 5,
                         children: [
                           const HomePageInitButton(type: 'Go to Insert Page'),
-                          const Padding(padding: EdgeInsets.only(bottom: 5)),
-                          Image.asset('assets/bafik.png'),
+                          Image.asset('assets/byJoel.png',
+                              width: 70, height: 70),
                         ]),
                   ))
             ])));

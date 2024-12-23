@@ -13,6 +13,7 @@ Future<String?> showAddItemDialog(BuildContext context) async {
             key: const Key('AlertDialog Dropdown'),
             title: const Text('Add New Item'),
             content: TextField(
+              key: const Key('TextField Dropdown'),
               controller: controller,
               decoration: const InputDecoration(
                 labelText: 'Enter Title',

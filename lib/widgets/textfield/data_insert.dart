@@ -3,7 +3,7 @@ import 'package:playbook/src/provider/provider.dart';
 import 'package:playbook/utils/colors.dart';
 import 'package:playbook/utils/screen_size.dart';
 import 'package:playbook/widgets/textfield/is_subject.dart';
-import 'package:playbook/widgets/textfield/update_provider_textfield.dart';
+import 'package:playbook/src/provider/update_provider_textfield.dart';
 import 'package:provider/provider.dart';
 
 class DataInsertField extends StatefulWidget {

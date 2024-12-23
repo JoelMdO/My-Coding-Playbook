@@ -20,7 +20,8 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             const Text('Playbook'),
-            Image.asset('assets/bafik.png', width: 80, height: 80),
+            Image.asset('assets/byJoel.png', width: 80, height: 80),
+            const ExitButton(),
           ],
         ),
         backgroundColor: const Color.fromARGB(255, 125, 186, 3),
@@ -65,7 +66,7 @@ class _HomeState extends State<Home> {
               Positioned(
                 bottom: 0,
                 right: 15,
-                child: Image.asset('assets/bafik.png'),
+                child: Image.asset('assets/byJoel.png'),
               ),
             ],
           ),
