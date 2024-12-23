@@ -4,20 +4,21 @@ import 'package:provider/provider.dart';
 
 void updateProvidersonTextField(
     BuildContext context, String section, String value) {
-  Provider.of<DataBaseProvider>(context, listen: false).textField(true);
-  Provider.of<DataBaseProvider>(context, listen: false)
-      .isSaveButtonDisabled(false);
+  final provider = Provider.of<DataBaseProvider>(context, listen: false);
+  provider.textField(true);
+  provider.isSaveButtonDisabled(false);
   if (value.isEmpty || value == '') {
-    Provider.of<DataBaseProvider>(context, listen: false).textField(false);
-    Provider.of<DataBaseProvider>(context, listen: false)
-        .isSaveButtonDisabled(true);
+    provider.textField(false);
+    provider.isSaveButtonDisabled(true);
   }
   if (section == 'Subject') {
-    Provider.of<DataBaseProvider>(context, listen: false).insertSubject(value);
+    provider.insertSubject(value);
+    provider.textControllers['Subject']?.text = value;
   } else if (section == 'Code') {
-    Provider.of<DataBaseProvider>(context, listen: false).insertCode(value);
+    provider.insertCode(value);
+    provider.textControllers['Code']?.text = value;
   } else if (section == 'Description') {
-    Provider.of<DataBaseProvider>(context, listen: false)
-        .insertDescription(value);
+    provider.insertDescription(value);
+    provider.textControllers['Description']?.text = value;
   }
 }

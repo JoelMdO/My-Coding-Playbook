@@ -94,9 +94,9 @@ class _ReadState extends State<Read> {
                     alignment: Alignment.bottomRight,
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        spacing: 5,
                         children: [
                           const HomePageInitButton(type: 'Go to Insert Page'),
+                          const Padding(padding: EdgeInsets.only(bottom: 5)),
                           Image.asset('assets/byJoel.png',
                               width: 70, height: 70),
                         ]),
